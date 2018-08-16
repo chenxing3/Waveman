@@ -3,10 +3,11 @@
 ## Introduction
 
 *Waveman* is pipeline to identify bat species for audio file
+
 It is based on deep learning method and is written in Python3 64-bit, which is test in Windows 10, Linux, and Mac
 Not support Python2 and Python3 32-bit since some problems ocourred when install package librosa and tensorflow.
-Here, we summarize how to setup this software package and run the scripts on a test data, 
-which is10 audio files with format of wav.
+
+Here, we summarize how to setup this software package and run the scripts on a small dataset, which contend 10 audio files with format of wav.
 
 ## Citation
 
