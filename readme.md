@@ -179,6 +179,7 @@ Weak folder is to store echo, weak, ambiguous and other uncertain images;
 nosignal folder is to store image with quiet signal.
 
 
+
 Step 3. Sum up all the images and make a train and valid dataset. Then combine them in a file with tfrecord format
 
     $ Make_dataset.py --ImageList=./list/Image_folder_list.xlsx --SpeciesList=./list/Species_label.xlsx
@@ -188,6 +189,7 @@ The above make dataset command have to steps: 1) assgin picture and split to tra
 You can choose single step by configure --Action. The default tf file in the folder ./dataset/tf
 
 
+
 Step 4. Train the tfrecord file and generate model.
 
 	$ python Training.py
@@ -195,6 +197,7 @@ Step 4. Train the tfrecord file and generate model.
 It require tfrecord file to train and valid. Please configure --TrainNum equal to the total number of train images. Two model can be choose: ResVggNet and VggNet.
 
 All the model are stored in the folder ./logs
+
 
 Step 5. Freeze a specific model	
 	
