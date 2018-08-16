@@ -148,6 +148,8 @@ Step 4. Train the tfrecord file and generate model;
 
 Step 5. Freeze a specific model.
 	
+
+### Details
 Step 1. Convert audio files to images.
 
 (1) To convert a single file:
