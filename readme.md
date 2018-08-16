@@ -32,13 +32,20 @@ Please tick the "Add Python XX to PATH" when you open Python install execute.
 An other way is open Python.exe again, please tick "Add Python to envrionment variables" in Advanced Options.
 
 The following package need install in Python
+
 (1) librosa
+
 (2) tensorflow (tensorflow-gpu)
-(2) matplotlib
-(3) pandas
-(4) Pillow
-(5) numpy
-(6) xlrd
+
+(3) matplotlib
+
+(4) pandas
+
+(5) Pillow
+
+(6) numpy
+
+(7) xlrd
 
 For example if not install package 'librosa', the system will remind:
 
