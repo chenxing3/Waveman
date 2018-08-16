@@ -65,11 +65,11 @@ To obtain the source code from github, let us assume you want to clone this repo
 directory named `Waveman`:
 
     cd ./Waveman
-    git clone https://github.com/
+    git clone https://github.com/chenxing3/Waveman.git
 
 You can also retrieve the code using wget by doing the following:
 
-    wget --no-check-certificate https://github.com/
+    wget --no-check-certificate https://github.com/chenxing3/Waveman.git
 
 ## Executing the code
 
