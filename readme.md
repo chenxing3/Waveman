@@ -89,29 +89,8 @@ Here is how you can use this script
 =============================================================================
 python Prediction.py
 
-usage: Prediction.py [-h] [--AudioFile AUDIOFILE] 
-                     
-		     [--Model MODEL]
-
-                     [--SpeciesLabel SPECIESLABEL] 
-		     
-		     [--Output OUTPUT]
-                     
-		     [--ImageWidth IMAGEWIDTH] 
-		     
-		     [--ImageHeight IMAGEHEIGHT]
-                     
-		     [--SegmentLength SEGMENTLENGTH]
-                     
-		     [--PredLength PREDICTLENGTH] 
-		     
-		     [--Probability PROBABILITY]
-                     
-		     [--Repeat REPEAT] 
-		     
-		     [--SecondChk SECONDCHK]
-                     
-		     [--ChkRange CHKRANGE]
+usage: Prediction.py [-h] [--AudioFile AUDIOFILE] [--Model MODEL] [--SpeciesLabel SPECIESLABEL] [--Output OUTPUT] [--ImageWidth IMAGEWIDTH] [--ImageHeight IMAGEHEIGHT] [--SegmentLength SEGMENTLENGTH] [--PredLength PREDICTLENGTH]  [--Probability PROBABILITY]
+ [--Repeat REPEAT] [--SecondChk SECONDCHK] [--ChkRange CHKRANGE]
 
 optional arguments:
   -h, --help            show this help message and exit
