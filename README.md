@@ -22,6 +22,7 @@ In addition, the trained models of ResVggNet and VggNet provided.
 
 *Waveman* depends on 
 + [Python 64-bit]
+
 Windows: https://www.python.org/downloads/windows/
 
 Linux: https://www.python.org/downloads/source/
@@ -90,29 +91,42 @@ usage: Prediction.py [-h] [--AudioFile AUDIOFILE] [--Model MODEL]
                      [--ChkRange CHKRANGE]
 
 optional arguments:
-  -h, --help            show this help message and exit
-  --AudioFile AUDIOFILE
+
+-h, --help            show this help message and exit
+
+--AudioFile AUDIOFILE
                         (Require) Please enter audio file for prediction
-  --Model MODEL         Please enter model: ResVggNet, VggNet
-  --SpeciesLabel SPECIESLABEL
+
+--Model MODEL         Please enter model: ResVggNet, VggNet
+
+--SpeciesLabel SPECIESLABEL
                         Please enter species label file
-  --Output OUTPUT       create folder to store result and other temp files
-  --ImageWidth IMAGEWIDTH
+
+--Output OUTPUT       create folder to store result and other temp files
+
+--ImageWidth IMAGEWIDTH
                         (optimal) image width, default is 64
-  --ImageHeight IMAGEHEIGHT
+
+--ImageHeight IMAGEHEIGHT
                         (optimal) image height, default is 64
-  --SegmentLength SEGMENTLENGTH
+
+--SegmentLength SEGMENTLENGTH
                         (optimal) length of segment, default is 10368
-  --PredLength PREDICTLENGTH
+
+--PredLength PREDICTLENGTH
                         (optimal) predict number each time
-  --Probability PROBABILITY
+
+--Probability PROBABILITY
                         (optimal) The prediction lower than the probability
                         will be exculde
-  --Repeat REPEAT       (optimal) The prediction lower than the repeat number
+
+--Repeat REPEAT       (optimal) The prediction lower than the repeat number
                         will be exculde
-  --SecondChk SECONDCHK
+
+--SecondChk SECONDCHK
                         (optimal) Choose whether use second check
-  --ChkRange CHKRANGE   (optimal) flack range of episodes, must > 0
+
+--ChkRange CHKRANGE   (optimal) flack range of episodes, must > 0
 
 ## Running on test data
 The test data is an audio file with format of wav (only support wav). 
