@@ -138,10 +138,10 @@ Step 1. Convert audio files to images.
 
     $ python Convert_Image.py --AudioFile=./audio/test.wav
 	
-	If not specify a ID, it will generate a random string with 8 characters. 
+If not specify a ID, it will generate a random string with 8 characters. 
 	To specify ID, the command is:
 	
-	$ python Convert_Image.py --AudioFile=./audio/test.wav --ID=test
+    $ python Convert_Image.py --AudioFile=./audio/test.wav --ID=test
 	
 (2) To convert many audio files, please provide a excel list with three information: audio file, ID and species (Please refer a temple in ./list/Audio_list.xlsx).
 If two or more species in audio file, please separate it to multiple audio files with only one species include it. 
