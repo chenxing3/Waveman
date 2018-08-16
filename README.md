@@ -208,3 +208,5 @@ It will choose the latest generated model in the ./logs and freeze the model and
 	
 Almost the log file also in the logs except step1. ResVggNet and VggNet networks in the model.py in the folder utils.
 
+## License
+Code and audio data are available for research purposes only. For any other use of the software or data, please contact the us.
