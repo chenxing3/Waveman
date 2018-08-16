@@ -51,7 +51,7 @@ Solution:
 Anaconda users can install using conda:
 
     $ conda install -c conda-forge librosa
-	$ conda install tensorflow
+    $ conda install tensorflow
 
 Mac users can install using brew to install python3 and related package
 
@@ -75,7 +75,7 @@ options that need to be passed to the script, you can do the following:
 
     $ python Prediction.py
 
-    Here is how you can use this script
+Here is how you can use this script
 =============================================================================
 python Prediction.py
 usage: Prediction.py [-h] [--AudioFile AUDIOFILE] [--Model MODEL]
@@ -158,14 +158,14 @@ Step 3. Sum up all the images and make a train and valid dataset. Then combine t
 
     $ Make_dataset.py --ImageList=./list/Image_folder_list.xlsx --SpeciesList=./list/Species_label.xlsx
 	
-	The above make dataset command have to steps: 1) assgin picture and split to train and valid datasets; 2) make tfrecord file.
+The above make dataset command have to steps: 1) assgin picture and split to train and valid datasets; 2) make tfrecord file.
 You can choose single step by configure --Action. The default tf file in the folder ./dataset/tf
 
 Step 4. Train the tfrecord file and generate model.
 
 	$ python Training.py
 	
-	It require tfrecord file to train and valid. Please configure --TrainNum equal to the total number of train images. Two model can be choose: ResVggNet and VggNet.
+It require tfrecord file to train and valid. Please configure --TrainNum equal to the total number of train images. Two model can be choose: ResVggNet and VggNet.
 All the model are stored in the folder ./logs
 
 
@@ -173,7 +173,7 @@ Step 5. Freeze a specific model
 	
 	$ python freeze.py
 	
-	It will choose the latest generated model in the ./logs and freeze the model and save in the ./model.ckpt with pb format.
+It will choose the latest generated model in the ./logs and freeze the model and save in the ./model.ckpt with pb format.
 	
 Almost the log file also in the logs except step1. ResVggNet and VggNet networks in the model.py in the folder utils.
 
