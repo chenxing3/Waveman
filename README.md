@@ -22,9 +22,13 @@ In addition, the trained models of ResVggNet and VggNet provided.
 
 *Waveman* depends on 
 + [Python 64-bit]
+
 Windows: https://www.python.org/downloads/windows/
+
 Linux: https://www.python.org/downloads/source/
+
 Mac: https://www.python.org/downloads/mac-osx/
+
 Remind: Don't install version 3.7 since the tensorflow package not support this version currently(2018/08/12).
 
 Setting environment variables:
