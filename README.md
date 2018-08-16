@@ -74,12 +74,12 @@ Mac users can install using brew to install python3 and related package
 To obtain the source code from github, let us assume you want to clone this repo into a
 directory named `Waveman`:
 
+    git clone https://github.com/chenxing3/Waveman
     cd ./Waveman
-    git clone https://github.com/
 
 You can also retrieve the code using wget by doing the following:
 
-    wget --no-check-certificate https://github.com/
+    wget --no-check-certificate https://github.com/chenxing3/Waveman
 
 ## Executing the code
 
