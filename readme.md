@@ -27,8 +27,10 @@ Linux: https://www.python.org/downloads/source/
 Mac: https://www.python.org/downloads/mac-osx/
 Remind: Don't install version 3.7 since the tensorflow package not support this version currently(2018/08/12).
 
-Setting environment variables
+Setting environment variables:
+
 Please tick the "Add Python XX to PATH" when you open Python install execute.
+
 An other way is open Python.exe again, please tick "Add Python to envrionment variables" in Advanced Options.
 
 The following package need install in Python
@@ -83,6 +85,7 @@ options that need to be passed to the script, you can do the following:
     $ python Prediction.py
 
 Here is how you can use this script
+
 =============================================================================
 python Prediction.py
 usage: Prediction.py [-h] [--AudioFile AUDIOFILE] [--Model MODEL]
@@ -141,6 +144,7 @@ Step 4. Train the tfrecord file and generate model;
 Step 5. Freeze a specific model.
 	
 Step 1. Convert audio files to images.
+
 (1) To convert a single file:
 
     $ python Convert_Image.py --AudioFile=./audio/test.wav
@@ -151,14 +155,19 @@ If not specify a ID, it will generate a random string with 8 characters.
     $ python Convert_Image.py --AudioFile=./audio/test.wav --ID=test
 	
 (2) To convert many audio files, please provide a excel list with three information: audio file, ID and species (Please refer a temple in ./list/Audio_list.xlsx).
+
 If two or more species in audio file, please separate it to multiple audio files with only one species include it. 
 
     $ python Convert_Image_batch.py --AudioList=./list/Audio_list.xlsx
 
 Step 2. Manually assign images to specific folders, which images classify to three categories.
-	This step require manually selection. There are four folders generated in step 1 for you to assign the images, include strong, weak, nosignal and others.
+
+This step require manually selection. There are four folders generated in step 1 for you to assign the images, include strong, weak, nosignal and others.
+
 Strong folder is provided to store bat signal with relatively intact call structure; 
+
 Weak folder is to store echo, weak, ambiguous and other uncertain images;
+
 nosignal folder is to store image with quiet signal.
 
 Step 3. Sum up all the images and make a train and valid dataset. Then combine them in a file with tfrecord format
@@ -166,6 +175,7 @@ Step 3. Sum up all the images and make a train and valid dataset. Then combine t
     $ Make_dataset.py --ImageList=./list/Image_folder_list.xlsx --SpeciesList=./list/Species_label.xlsx
 	
 The above make dataset command have to steps: 1) assgin picture and split to train and valid datasets; 2) make tfrecord file.
+
 You can choose single step by configure --Action. The default tf file in the folder ./dataset/tf
 
 Step 4. Train the tfrecord file and generate model.
@@ -173,8 +183,8 @@ Step 4. Train the tfrecord file and generate model.
 	$ python Training.py
 	
 It require tfrecord file to train and valid. Please configure --TrainNum equal to the total number of train images. Two model can be choose: ResVggNet and VggNet.
-All the model are stored in the folder ./logs
 
+All the model are stored in the folder ./logs
 
 Step 5. Freeze a specific model	
 	
