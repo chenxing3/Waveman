@@ -25,8 +25,8 @@ def parse_args(path):
     parser.add_argument('--AudioFile', dest='AudioFile', type=str,
                         help='(Require) Please enter audio file for prediction')
     parser.add_argument('--Model', dest='Model', type=str,
-                        default = 'ResVggNet',
-                        help='Please enter model: ResVggNet, VggNet')
+                        default = 'BatNet',
+                        help='Please enter model: BatNet, VggNet')
     parser.add_argument('--SpeciesLabel', dest='SpeciesLabel', type=str,
                         default = path+'/list/Species_label.xlsx',
                         help='Please enter species label file')
