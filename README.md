@@ -4,7 +4,7 @@
 
 *Waveman* is pipeline to identify bat species for audio file
 
-It is based on deep learning method and is written in Python3 64-bit, which is test in Windows 10, Linux, and Mac
+It is based on deep learning method and is written using Python3(64-bit), which is test in Windows 10, Linux, and Mac.
 Not support Python2 and Python3 32-bit since some problems ocourred when install package librosa and tensorflow.
 
 Here, we summarize how to setup this software package and run the scripts on a small dataset, which contend 10 audio files with format of wav.
@@ -16,7 +16,7 @@ Here, we summarize how to setup this software package and run the scripts on a s
 ## Parts 
 
 This repo has two components: Python scripts and a small size of data to run the algorithm. 
-In addition, the trained models of BatNet and VggNet provided.
+In addition, the trained models of BatNet provided.
 
 
 ## Dependencies
@@ -30,13 +30,13 @@ Linux: https://www.python.org/downloads/source/
 
 Mac: https://www.python.org/downloads/mac-osx/
 
-Remind: Don't install version 3.7 since the tensorflow package not support this version currently(2018/08/12).
+Remind: Don't install version 3.7 since the tensorflow package not support this version currently(until 2018/09/01).
 
 Setting environment variables:
 
 Please tick the "Add Python XX to PATH" when you open Python install execute.
 
-An other way is open Python.exe again, please tick "Add Python to envrionment variables" in Advanced Options.
+If forget, please open Python.exe again, tick "Add Python to envrionment variables" in Advanced Options.
 
 The following package need install in Python
 
@@ -67,7 +67,7 @@ Anaconda users can install using conda:
     $ conda install -c conda-forge librosa
     $ conda install tensorflow
 
-Mac users can install using brew to install python3 and related package
+Mac users could use brew to install python3 and related packages.
 
 ## Getting the source code
 
@@ -125,14 +125,14 @@ optional arguments:
 
 ## Running on test data
 The test data is an audio file with format of wav (only support wav). 
-Model is ./model.ckpt/BatNet/frozen_model.pb
+All the frozen Model in directory ./model.ckpt/BatNet and named frozen_model.pb
 Species and corresponding to the labels are in ./list/Species_label.xlsx
 All the result in default folder ./TMP, the Result_summary.xls is the final result. 
 All log is written in the file log_predict.txt in ./logs folder.
 
     $ python Prediction.py --AudioFile=./audio/test.wav
 
-If specify the output folder, please configure --Output, such as
+If specify the output folder, please configure --Output, such as:
 
     $ python Prediction.py --AudioFile=./audio/test.wav --Output=test
 	
@@ -158,21 +158,20 @@ Step 1. Convert audio files to images.
 
     $ python Convert_Image.py --AudioFile=./audio/test.wav
 	
-If not specify a ID, it will generate a random string with 8 characters. 
-	To specify ID, the command is:
+If not specify a ID, it will generate a random string with 8 characters. To specify ID, the command is:
 	
     $ python Convert_Image.py --AudioFile=./audio/test.wav --ID=test
 	
 (2) To convert many audio files, please provide a excel list with three information: audio file, ID and species (Please refer a temple in ./list/Audio_list.xlsx).
 
-If two or more species in audio file, please separate it to multiple audio files with only one species include it. 
+If two or more species in audio file, please separate it to multiple audio files with only one species in each file.
 
     $ python Convert_Image_batch.py --AudioList=./list/Audio_list.xlsx
 
 
 Step 2. Manually assign images to specific folders, which images classify to three categories.
 
-This step require manually selection. There are four folders generated in step 1 for you to assign the images, include strong, weak, nosignal and others.
+This step requires manually selection. There are four folders generated in step 1 for you to assign the images, include strong, weak, nosignal and others.
 
 Strong folder is provided to store bat signal with relatively intact call structure; 
 
@@ -181,22 +180,20 @@ Weak folder is to store echo, weak, ambiguous and other uncertain images;
 nosignal folder is to store image with quiet signal.
 
 
-
 Step 3. Sum up all the images and make a train and valid dataset. Then combine them in a file with tfrecord format
 
     $ python Make_dataset.py --ImageList=./list/Image_folder_list.xlsx --SpeciesList=./list/Species_label.xlsx
 	
-The above make dataset command have to steps: 1) assgin picture and split to train and valid datasets; 2) make tfrecord file.
+The above make dataset command have two steps: 1) assgin picture and split to train and valid datasets; 2) make tfrecord file.
 
-You can choose single step by configure --Action. The default tf file in the folder ./dataset/tf
-
+You can choose single step by configure --Action. The default store directory of tf file is ./dataset/tf
 
 
 Step 4. Train the tfrecord file and generate model.
 
     $ python Training.py
 	
-It require tfrecord file to train and valid. Please configure --TrainNum equal to the total number of train images. Two model can be choose: BatNet and VggNet.
+It require tfrecord file to train and valid. Please configure --TrainNum equal to the total number of train images. Currently only provide model BatNet (until 01/09/2018).
 
 All the model are stored in the folder ./logs
 
@@ -205,9 +202,9 @@ Step 5. Freeze a specific model
 	
     $ python freeze.py
 	
-It will choose the latest generated model in the ./logs and freeze the model and save in the ./model.ckpt with pb format.
+It will choose the latest generated model in the ./logs. The frozen model will save in the ./model.ckpt with pb format.
 	
-Almost the log file also in the logs except step1. BatNet and VggNet networks in the model.py in the folder utils.
+Almost the log file in the logs except step1. BatNet and VggNet networks in the MODEL.py in the folder utils.
 
 ## License
 Code and audio data are available for research purposes only. For any other use of the software or data, please contact the us.
