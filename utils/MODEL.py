@@ -61,7 +61,7 @@ class Model:
         net = tf.nn.relu(net)
         return net
 
-    def ResVggNet(self, input_op):
+    def BatNet(self, input_op):
         net = self.conv(input_op, 64, name="input_node")
         net = self.conv(net, 64)
         net = self.maxpool(net)
