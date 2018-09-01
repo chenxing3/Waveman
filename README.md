@@ -92,6 +92,7 @@ options that need to be passed to the script, you can do the following:
 Here is how you can use this script
 
 =============================================================================
+
 python Prediction.py
 
 usage: Prediction.py [-h] [--AudioFile AUDIOFILE] [--Model MODEL] [--SpeciesLabel SPECIESLABEL] [--Output OUTPUT] [--ImageWidth IMAGEWIDTH] [--ImageHeight IMAGEHEIGHT] [--SegmentLength SEGMENTLENGTH] [--PredLength PREDICTLENGTH]  [--Probability PROBABILITY]
