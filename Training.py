@@ -39,8 +39,8 @@ def parse_args(path):
                         default= 2,
                         help='(optimal) pool size, default is 2')
     parser.add_argument('--NetworkType', dest='NetworkType', type=str,
-                        default = 'ResVggNet',
-                        help='(optimal) ResVggNet or VggNet')
+                        default = 'BatNet',
+                        help='(optimal) BatNet or VggNet')
     parser.add_argument('--LearningRate', dest='LearningRate', type=float,
                         default= 1e-5,
                         help='(optimal) learning rate, default is 1e-5')
@@ -69,9 +69,9 @@ def parse_args(path):
 
     args = parser.parse_args()
 
-    if args.NetworkType not in ['ResVggNet', 'VggNet']:
+    if args.NetworkType not in ['BatNet', 'VggNet']:
         print('Invalid feature: ', args.NetworkType)
-        print("Please input a action: ResVggNet or VggNet")
+        print("Please input a action: BatNet or VggNet")
     if args.ClassNum < 1:
         print('\n-------------->')
         print('Error! class number must be an integer that >= 1')
