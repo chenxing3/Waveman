@@ -16,7 +16,7 @@ Here, we summarize how to setup this software package and run the scripts on a s
 ## Parts 
 
 This repo has two components: Python scripts and a small size of data to run the algorithm. 
-In addition, the trained models of ResVggNet and VggNet provided.
+In addition, the trained models of BatNet and VggNet provided.
 
 
 ## Dependencies
