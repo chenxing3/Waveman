@@ -102,7 +102,7 @@ optional arguments:
   -h, --help            show this help message and exit
   --AudioFile AUDIOFILE
                         (Require) Please enter audio file for prediction
-  --Model MODEL         Please enter model: ResVggNet, VggNet
+  --Model MODEL         Please enter model: BatNet, VggNet
   --SpeciesLabel SPECIESLABEL
                         Please enter species label file
   --Output OUTPUT       create folder to store result and other temp files
@@ -125,7 +125,7 @@ optional arguments:
 
 ## Running on test data
 The test data is an audio file with format of wav (only support wav). 
-Model is ./model.ckpt/ResVggNet/frozen_model.pb
+Model is ./model.ckpt/BatNet/frozen_model.pb
 Species and corresponding to the labels are in ./list/Species_label.xlsx
 All the result in default folder ./TMP, the Result_summary.xls is the final result. 
 All log is written in the file log_predict.txt in ./logs folder.
