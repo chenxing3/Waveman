@@ -196,7 +196,7 @@ Step 4. Train the tfrecord file and generate model.
 
     $ python Training.py
 	
-It require tfrecord file to train and valid. Please configure --TrainNum equal to the total number of train images. Two model can be choose: ResVggNet and VggNet.
+It require tfrecord file to train and valid. Please configure --TrainNum equal to the total number of train images. Two model can be choose: BatNet and VggNet.
 
 All the model are stored in the folder ./logs
 
@@ -207,7 +207,7 @@ Step 5. Freeze a specific model
 	
 It will choose the latest generated model in the ./logs and freeze the model and save in the ./model.ckpt with pb format.
 	
-Almost the log file also in the logs except step1. ResVggNet and VggNet networks in the model.py in the folder utils.
+Almost the log file also in the logs except step1. BatNet and VggNet networks in the model.py in the folder utils.
 
 ## License
 Code and audio data are available for research purposes only. For any other use of the software or data, please contact the us.
