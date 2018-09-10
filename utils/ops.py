@@ -20,7 +20,7 @@ def ChkFile(file):
     '''
     if not os.path.isfile(file):
         print('Error! Cannot find audio file {}. \
-            \nPlease inputa correct one!'.format(file))
+            \nPlease input a check the path or filename!'.format(file))
         sys.exit(1)
 
 def ChkDir(Dir):
