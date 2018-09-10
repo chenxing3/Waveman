@@ -11,7 +11,7 @@ Here, we summarize how to setup this software package and run the scripts on a s
 
 ## Citation
 
- *Add soon*
+Xing Chen1, Jun Zhao, Yan-hua Chen, Wei Zhou, Alice C. Hughes. Automatic standardized processing and identification of tropical bat calls using deep learning approaches. Submitted.
 
 ## Parts 
 
@@ -30,7 +30,8 @@ Linux: https://www.python.org/downloads/source/
 
 Mac: https://www.python.org/downloads/mac-osx/
 
-Remind: Don't install version 3.7 since the tensorflow package not support this version currently(until 2018/09/01).
+Remind: Don't install version 3.7 since the tensorflow package not support this version currently(until 2018/09/10).
+Tensorflow update: https://pypi.org/project/tensorflow/
 
 Setting environment variables:
 
