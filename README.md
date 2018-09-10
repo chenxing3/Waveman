@@ -31,6 +31,7 @@ Linux: https://www.python.org/downloads/source/
 Mac: https://www.python.org/downloads/mac-osx/
 
 Remind: Don't install version 3.7 since the tensorflow package not support this version currently(until 2018/09/10).
+
 Tensorflow update: https://pypi.org/project/tensorflow/
 
 Setting environment variables:
@@ -70,6 +71,81 @@ Anaconda users can install using conda:
 
 Mac users could use brew to install python3 and related packages.
 
+## Species list
+The model provided support following 36 species:
+
+Aselliscus stoliczkanus
+
+Hipposideros armiger
+
+Hipposideros bicolor
+
+Hipposideros cineraceus
+
+Hipposideros diadema
+
+Hipposideros larvatus
+
+Hipposideros lekaguli
+
+Hipposideros pomona
+
+Hipposideros turpis
+
+Rhinolophus affinis
+
+Rhinolophus coelophyllus
+
+Rhinolophus lepidus
+
+Rhinolophus malayanus
+
+Rhinolophus pearsonii
+
+Rhinolophus pusillus
+
+Rhinolophus rex
+
+Rhinolophus robinsoni
+
+Rhinolophus siamensis
+
+Rhinolophus sinicus
+
+Rhinolophus stheno
+
+Rhinolophus yunanensis
+
+Hypsugo pulveratus
+
+Ia io
+
+Kerivoula hardwickii
+
+Miniopterus magnater
+
+Murina cineracea
+
+Murina cyclotis
+
+Myotis laniger
+
+Myotis muricola
+
+Myotis siligorensis
+
+Phoniscus jagorii
+
+Scotomanes ornatus
+
+Tylonycteris robustula
+
+Tylonyctoris pachypus
+
+Megaderma spasma
+
+Cheiromeles torquatus
+
 ## Getting the source code
 
 To obtain the source code from github, let us assume you want to clone this repo into a
@@ -85,6 +161,7 @@ You can also retrieve the code using wget by doing the following:
 ## Executing the code
 
 # Direct Prediction:
+
 The script you will need to execute is `Prediction.py`. To see command-line 
 options that need to be passed to the script, you can do the following:
 
