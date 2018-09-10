@@ -11,7 +11,7 @@ Here, we summarize how to setup this software package and run the scripts on a s
 
 ## Citation
 
-Xing Chen1, Jun Zhao, Yan-hua Chen, Wei Zhou, Alice C. Hughes. Automatic standardized processing and identification of tropical bat calls using deep learning approaches. Submitted.
+Xing Chen, Jun Zhao, Yan-hua Chen, Wei Zhou, Alice C. Hughes. Automatic standardized processing and identification of tropical bat calls using deep learning approaches. Submitted.
 
 ## Parts 
 
