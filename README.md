@@ -162,9 +162,9 @@ You can also retrieve the code using wget by doing the following:
 
     wget --no-check-certificate https://github.com/chenxing3/Waveman
 
-## Executing the code
+# Executing the code
 
-# Direct Prediction:
+## Direct Prediction:
 
 The script you will need to execute is `Prediction.py`. To see command-line 
 options that need to be passed to the script, you can do the following:
@@ -234,7 +234,7 @@ Step 5. Freeze a specific model.
 	
 
 ### Details
-Step 1. Convert audio files to images.
+#### Step 1. Convert audio files to images.
 
 (1) To convert a single file:
 
@@ -251,7 +251,7 @@ If two or more species in audio file, please separate it to multiple audio files
     $ python Convert_Image_batch.py --AudioList=./list/Audio_list.xlsx
   
  
-Step 2. Manually assign images to specific folders, which images classify to three categories.
+#### Step 2. Manually assign images to specific folders, which images classify to three categories.
 
 This step requires manually selection. There are four folders generated in step 1 for you to assign the images, include strong, weak, nosignal and others.
 
@@ -262,7 +262,7 @@ Weak folder is to store echo, weak, ambiguous and other uncertain images;
 nosignal folder is to store image with quiet signal.
 
  
-Step 3. Sum up all the images and make a train and valid dataset. Then combine them in a file with tfrecord format
+#### Step 3. Sum up all the images and make a train and valid dataset. Then combine them in a file with tfrecord format
 
     $ python Make_dataset.py --ImageList=./list/Image_folder_list.xlsx --SpeciesList=./list/Species_label.xlsx
 	
@@ -271,7 +271,7 @@ The above make dataset command have two steps: 1) assgin picture and split to tr
 You can choose single step by configure --Action. The default store directory of tf file is ./dataset/tf
  
  
-Step 4. Train the tfrecord file and generate model.
+#### Step 4. Train the tfrecord file and generate model.
 
     $ python Training.py
 	
@@ -280,7 +280,7 @@ It require tfrecord file to train and valid. Please configure --TrainNum equal t
 All the model are stored in the folder ./logs
  
  
-Step 5. Freeze a specific model	
+#### Step 5. Freeze a specific model	
 	
     $ python freeze.py
 	
