@@ -207,10 +207,14 @@ optional arguments:
 
 ## Running on test data
 The test data is an audio file with format of wav (only support wav). 
-All the frozen Model in directory ./model.ckpt/BatNet and named frozen_model.pb
+
+All the frozen Model in the file frozen_model.pb in directory ./model.ckpt/BatNet
+
 Species and corresponding to the labels are in ./list/Species_label.xlsx
-All the result in default folder ./TMP, the Result_summary.xls is the final result. 
-All log is written in the file log_predict.txt in ./logs folder.
+
+All the final result in the Result_summary.xls in default folder ./TMP, 
+
+All log is written in the file log_predict.txt in ./logs.
 
     $ python Prediction.py --AudioFile=./audio/test.wav
 
