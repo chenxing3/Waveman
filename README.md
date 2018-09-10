@@ -245,8 +245,8 @@ If not specify a ID, it will generate a random string with 8 characters. To spec
 If two or more species in audio file, please separate it to multiple audio files with only one species in each file.
 
     $ python Convert_Image_batch.py --AudioList=./list/Audio_list.xlsx
+  
  
-
 Step 2. Manually assign images to specific folders, which images classify to three categories.
 
 This step requires manually selection. There are four folders generated in step 1 for you to assign the images, include strong, weak, nosignal and others.
@@ -265,7 +265,7 @@ Step 3. Sum up all the images and make a train and valid dataset. Then combine t
 The above make dataset command have two steps: 1) assgin picture and split to train and valid datasets; 2) make tfrecord file.
 
 You can choose single step by configure --Action. The default store directory of tf file is ./dataset/tf
-
+ 
  
 Step 4. Train the tfrecord file and generate model.
 
@@ -274,7 +274,7 @@ Step 4. Train the tfrecord file and generate model.
 It require tfrecord file to train and valid. Please configure --TrainNum equal to the total number of train images. Currently only provide model BatNet (until 01/09/2018).
 
 All the model are stored in the folder ./logs
-
+ 
  
 Step 5. Freeze a specific model	
 	
