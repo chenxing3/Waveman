@@ -71,6 +71,9 @@ Anaconda users can install using conda:
 
 Mac users could use brew to install python3 and related packages.
 
+## BatNet archecture structure
+![Image text](https://github.com/chenxing3/Waveman/blob/master/model.ckpt/BatNet/Bat-Figure_1.tif)
+
 ## Species list
 The model provided support following 36 species:
 
