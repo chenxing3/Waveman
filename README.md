@@ -182,19 +182,22 @@ usage: Prediction.py [-h] [--AudioFile AUDIOFILE] [--Model MODEL] [--SpeciesLabe
 
 optional arguments:
 
-  -h, --help            show this help message and exit
+  -h, --help
+                        show this help message and exit
   
   --AudioFile AUDIOFILE
   
                         (Require) Please enter audio file for prediction
 			
-  --Model MODEL         Please enter model: BatNet, VggNet
+  --Model MODEL
+                        Please enter model: BatNet, VggNet
   
   --SpeciesLabel SPECIESLABEL
   
                         Please enter species label file
 			
-  --Output OUTPUT       create folder to store result and other temp files
+  --Output OUTPUT
+                        create folder to store result and other temp files
   
   --ImageWidth IMAGEWIDTH
   
@@ -216,13 +219,15 @@ optional arguments:
   
                         (optimal) The prediction lower than the probability will be exculde
 			
-  --Repeat REPEAT       (optimal) The prediction lower than the repeat number will be exculde
+  --Repeat REPEAT       
+                        (optimal) The prediction lower than the repeat number will be exculde
   
   --SecondChk SECONDCHK
   
                         (optimal) Choose whether use second check
 			
-  --ChkRange CHKRANGE   (optimal) flack range of episodes, must > 0
+  --ChkRange CHKRANGE   
+                        (optimal) flack range of episodes, must > 0
   
 ## Running on test data
 The test data is an audio file with format of wav (only support wav). 
