@@ -4,8 +4,8 @@
 
 *Waveman* is pipeline to identify bat species for audio file
 
-It is based on deep learning method and is written using Python3(64-bit), which is test in Windows 10, Linux, and Mac.
-Not support Python2 and Python3 32-bit since some problems ocourred when install package librosa and tensorflow.
+It is based on deep learning method and is written using Python3(64-bit), which test in Windows 7/10, Linux, and Mac OS.
+Not support Python2 and Python3(32-bit) since some problems ocourred when install package librosa or tensorflow.
 
 Here, we summarize how to setup this software package and run the scripts on a small dataset, which contend 10 audio files with format of wav.
 
@@ -30,17 +30,17 @@ Linux: https://www.python.org/downloads/source/
 
 Mac: https://www.python.org/downloads/mac-osx/
 
-Remind: Don't install version 3.7 since the tensorflow package not support this version currently(until 2018/09/10).
+Remind: Don't install latest version 3.7 since the tensorflow package not support this version currently (until 2018/09/10).
 
 Tensorflow update: https://pypi.org/project/tensorflow/
 
-Setting environment variables:
+### Setting environment variables:
 
 Please tick the "Add Python XX to PATH" when you open Python install execute.
 
 If forget, please open Python.exe again, tick "Add Python to envrionment variables" in Advanced Options.
 
-The following package need install in Python
+The following package require install as follow:
 
 (1) librosa
 
@@ -69,7 +69,7 @@ Anaconda users can install using conda:
     $ conda install -c conda-forge librosa
     $ conda install tensorflow
 
-Mac users could use brew to install python3 and related packages.
+Mac users could use brew to install python3 and use pip install related packages.
 
 ## BatNet architecture design
 ![Image text](https://github.com/chenxing3/Waveman/blob/master/model.ckpt/BatNet/Bat-Figure_1.png)
@@ -181,30 +181,49 @@ usage: Prediction.py [-h] [--AudioFile AUDIOFILE] [--Model MODEL] [--SpeciesLabe
  [--Repeat REPEAT] [--SecondChk SECONDCHK] [--ChkRange CHKRANGE]
 
 optional arguments:
-  -h, --help            show this help message and exit
-  --AudioFile AUDIOFILE
-                        (Require) Please enter audio file for prediction
-  --Model MODEL         Please enter model: BatNet, VggNet
-  --SpeciesLabel SPECIESLABEL
-                        Please enter species label file
-  --Output OUTPUT       create folder to store result and other temp files
-  --ImageWidth IMAGEWIDTH
-                        (optimal) image width, default is 64
-  --ImageHeight IMAGEHEIGHT
-                        (optimal) image height, default is 64
-  --SegmentLength SEGMENTLENGTH
-                        (optimal) length of segment, default is 10368
-  --PredLength PREDICTLENGTH
-                        (optimal) predict number each time
-  --Probability PROBABILITY
-                        (optimal) The prediction lower than the probability
-                        will be exculde
-  --Repeat REPEAT       (optimal) The prediction lower than the repeat number
-                        will be exculde
-  --SecondChk SECONDCHK
-                        (optimal) Choose whether use second check
-  --ChkRange CHKRANGE   (optimal) flack range of episodes, must > 0
 
+  -h, --help            show this help message and exit
+  
+  --AudioFile AUDIOFILE
+  
+                        (Require) Please enter audio file for prediction
+			
+  --Model MODEL         Please enter model: BatNet, VggNet
+  
+  --SpeciesLabel SPECIESLABEL
+  
+                        Please enter species label file
+			
+  --Output OUTPUT       create folder to store result and other temp files
+  
+  --ImageWidth IMAGEWIDTH
+  
+                        (optimal) image width, default is 64
+			
+  --ImageHeight IMAGEHEIGHT
+  
+                        (optimal) image height, default is 64
+			
+  --SegmentLength SEGMENTLENGTH
+  
+                        (optimal) length of segment, default is 10368
+			
+  --PredLength PREDICTLENGTH
+  
+                        (optimal) predict number each time
+			
+  --Probability PROBABILITY
+  
+                        (optimal) The prediction lower than the probability will be exculde
+			
+  --Repeat REPEAT       (optimal) The prediction lower than the repeat number will be exculde
+  
+  --SecondChk SECONDCHK
+  
+                        (optimal) Choose whether use second check
+			
+  --ChkRange CHKRANGE   (optimal) flack range of episodes, must > 0
+  
 ## Running on test data
 The test data is an audio file with format of wav (only support wav). 
 
@@ -212,7 +231,7 @@ All the frozen Model in the file frozen_model.pb in directory ./model.ckpt/BatNe
 
 Species and corresponding to the labels are in ./list/Species_label.xlsx
 
-All the final result in the Result_summary.xls in default folder ./TMP, 
+The final result in the Result_summary.xls in default folder ./TMP, 
 
 All log is written in the file log_predict.txt in ./logs.
 
@@ -248,12 +267,11 @@ If not specify a ID, it will generate a random string with 8 characters. To spec
 	
     $ python Convert_Image.py --AudioFile=./audio/test.wav --ID=test
 	
-(2) To convert many audio files, please provide a excel list with three information: audio file, ID and species (Please refer a temple in ./list/Audio_list.xlsx).
-
-If two or more species in audio file, please separate it to multiple audio files with only one species in each file.
+(2) To convert many audio files, please provide a excel list with three information: audio file, ID and species (Please refer a temple in ./list/Audio_list.xlsx). We will use ID as prefix for all the images filename.
 
     $ python Convert_Image_batch.py --AudioList=./list/Audio_list.xlsx
-  
+
+If two or more species in audio file, please split it to multiple audio files with only one species in each file.
  
 #### Step 2. Manually assign images to specific folders, which images classify to three categories.
 
@@ -266,7 +284,7 @@ Weak folder is to store echo, weak, ambiguous and other uncertain images;
 nosignal folder is to store image with quiet signal.
 
  
-#### Step 3. Sum up all the images and make a train and valid dataset. Then combine them in a file with tfrecord format
+#### Step 3. Sum up all the images and make train and valid datasets. Then combine all the images in a file with tfrecord format
 
     $ python Make_dataset.py --ImageList=./list/Image_folder_list.xlsx --SpeciesList=./list/Species_label.xlsx
 	
@@ -279,7 +297,7 @@ You can choose single step by configure --Action. The default store directory of
 
     $ python Training.py
 	
-It require tfrecord file to train and valid. Please configure --TrainNum equal to the total number of train images. Currently only provide model BatNet (until 01/09/2018).
+It require tfrecord file to train and valid. Please configure --TrainNum equal to the total number of train images. Currently only provide model BatNet (until 09/10/2018).
 
 All the model are stored in the folder ./logs
  
@@ -288,9 +306,9 @@ All the model are stored in the folder ./logs
 	
     $ python freeze.py
 	
-It will choose the latest generated model in the ./logs. The frozen model will save in the ./model.ckpt with pb format.
+It will choose the latest generated model in the directory ./logs. The frozen model will save in the ./model.ckpt with pb format.
 	
-Almost the log file in the logs except step1. BatNet and VggNet networks in the MODEL.py in the folder utils.
+Almost the log file in the logs except step 1. BatNet and VggNet networks in the MODEL.py in the folder utils.
 
 ## License
 Code and audio data are available for research purposes only. For any other use of the software or data, please contact the us.
