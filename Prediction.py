@@ -252,7 +252,7 @@ def main():
     # Step 2. Convert audio to image
     log = ops.Logs(log, LogFile)
     log.info('First round prediction ...')
-    log.info('Convert audio to image ... Please Waits for a while')
+    log.info('Convert audio to image ... Please wait for a while')
 
     # get signal episode array
     signal_matrix, labels = ops.GetEpisodes(signal, args.SegmentLength) 
