@@ -309,7 +309,7 @@ def main():
                 ## Store all the episodes require second check
                 SecondChkPool.append((index, label, prob))
 
-    log.info('Total {} images need to check ...'.format(str(count)))
+    log.info('Total {} images to check ...'.format(str(count)))
 
     MaxValue = int(args.PredictLength/(2*args.Repeat)) ## need first get the max value for each block
     count_second = 0 
