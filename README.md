@@ -307,7 +307,7 @@ You can choose single step by configure --Action. The default store directory of
 
     $ python Training.py
 	
-It require tfrecord file to train and valid. Please configure --TrainNum equal to the total number of train images. Currently only provide model BatNet (until 09/10/2018).
+It require tfrecord file to train and valid. Please configure --TrainNum equal to the total number of train images. Currently only provide model BatNet (until 19/11/2018).
 
 All the model are stored in the folder ./logs
  
