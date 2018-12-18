@@ -30,7 +30,7 @@ Linux: https://www.python.org/downloads/source/
 
 Mac: https://www.python.org/downloads/mac-osx/
 
-Remind: Don't install latest version 3.7 since the tensorflow package not support this version currently (until 2018/11/19).
+Remind: Don't install latest version 3.7 since the tensorflow package not support this version currently (until 2018/12/18).
 
 Tensorflow update: https://pypi.org/project/tensorflow/
 
@@ -306,7 +306,7 @@ You can choose single step by configure --Action. The default store directory of
 
     $ python Training.py
 	
-It require tfrecord file to train and valid. Please configure --TrainNum equal to the total number of train images. Currently only provide model BatNet (until 19/11/2018).
+It require tfrecord file to train and valid. Please configure --TrainNum equal to the total number of train images. Currently only provide model BatNet (until 18/12/2018).
 
 All the model are stored in the folder ./logs
  
