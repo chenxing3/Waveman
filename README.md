@@ -30,7 +30,7 @@ Linux: https://www.python.org/downloads/source/
 
 Mac: https://www.python.org/downloads/mac-osx/
 
-Remind: Don't install latest version 3.7 since the tensorflow package not support this version currently (until 2018/12/18).
+Remind: Don't install latest version 3.7 since the tensorflow package not support this version currently (until 2019/02/13).
 
 Tensorflow update: https://pypi.org/project/tensorflow/
 
