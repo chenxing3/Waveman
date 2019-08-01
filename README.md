@@ -44,7 +44,7 @@ The following package require to install:
 
 (1) librosa
 
-(2) tensorflow (tensorflow-gpu)
+(2) tensorflow (tensorflow-gpu, Remind: low than version 2.0, 07/07/2019)
 
 (3) matplotlib
 
@@ -128,7 +128,7 @@ Kerivoula hardwickii
 
 Miniopterus magnater
 
-Murina cineracea
+Murina tubinaris
 
 Murina cyclotis
 
