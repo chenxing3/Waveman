@@ -76,42 +76,42 @@ Mac users could use brew to install python3 and use pip install related packages
 ## Species list
 The model provided support following 36 species:
 
-Aselliscus stoliczkanus
-Hipposideros armiger
-Hipposideros bicolor
-Hipposideros cineraceus
-Hipposideros diadema
-Hipposideros larvatus
-Hipposideros lekaguli
-Hipposideros pomona
-Hipposideros turpis
-Rhinolophus affinis
-Rhinolophus coelophyllus
-Rhinolophus lepidus
-Rhinolophus malayanus
-Rhinolophus pearsonii
-Rhinolophus pusillus
-Rhinolophus rex
-Rhinolophus robinsoni
-Rhinolophus siamensis
-Rhinolophus sinicus
-Rhinolophus stheno
-Rhinolophus yunanensis
-Hypsugo pulveratus
-Ia io
-Kerivoula hardwickii
-Miniopterus magnater
-Murina tubinaris
-Murina cyclotis
-Myotis laniger
-Myotis muricola
-Myotis siligorensis
-Phoniscus jagorii
-Scotomanes ornatus
-Tylonycteris robustula
-Tylonycteris pachypus
-Megaderma spasma
-Cheiromeles torquatus
+Aselliscus stoliczkanus; 
+Hipposideros armiger; 
+Hipposideros bicolor; 
+Hipposideros cineraceus; 
+Hipposideros diadema; 
+Hipposideros larvatus complex; 
+Hipposideros lekaguli; 
+Hipposideros pomona; 
+Hipposideros turpis; 
+Rhinolophus affinis; 
+Rhinolophus coelophyllus; 
+Rhinolophus lepidus; 
+Rhinolophus malayanus complex; 
+Rhinolophus pearsonii; 
+Rhinolophus pusillus; 
+Rhinolophus rex; 
+Rhinolophus robinsoni; 
+Rhinolophus siamensis; 
+Rhinolophus sinicus; 
+Rhinolophus stheno; 
+Rhinolophus yunanensis; 
+Hypsugo pulveratus; 
+Ia io; 
+Kerivoula hardwickii; 
+Miniopterus magnater; 
+Murina tubinaris; 
+Murina cyclotis; 
+Myotis laniger; 
+Myotis muricola; 
+Myotis siligorensis; 
+Phoniscus jagorii; 
+Scotomanes ornatus; 
+Tylonycteris robustula; 
+Tylonycteris pachypus; 
+Megaderma spasma; 
+Cheiromeles torquatus; 
 
 ## Getting the source code
 
