@@ -11,12 +11,12 @@ Here, we summarize how to setup this software package and run the scripts on a s
 
 ## Citation
 
-Xing Chen, Jun Zhao, Yan-hua Chen, Wei Zhou, Alice C. Hughes. Automatic standardized processing and identification of tropical bat calls using deep learning approaches. Submitted.
+Xing Chen, Jun Zhao, Yan-hua Chen, Wei Zhou, Alice C. Hughes. (In press) Automatic standardized processing and identification of tropical bat calls using deep learning approaches. 
 
 ## Parts 
 
 This repo has two components: Python scripts and a small size of data to run the algorithm. 
-In addition, the trained models of BatNet provided.
+In addition, the trained models of BatNet are provided.
 
 
 ## Dependencies
@@ -38,11 +38,11 @@ Please tick the "Add Python XX to PATH" when you open Python install execute.
 
 If forget, please open Python.exe again, tick "Add Python to envrionment variables" in Advanced Options.
 
-The following package require to install:
+The following packages require to install:
 
 (1) librosa
 
-(2) tensorflow (tensorflow-gpu, Remind: low than version 2.0, 07/07/2019)
+(2) tensorflow (tensorflow-gpu <= 1.4, 10/09/2019)
 
 (3) matplotlib
 
@@ -77,75 +77,40 @@ Mac users could use brew to install python3 and use pip install related packages
 The model provided support following 36 species:
 
 Aselliscus stoliczkanus
-
 Hipposideros armiger
-
 Hipposideros bicolor
-
 Hipposideros cineraceus
-
 Hipposideros diadema
-
 Hipposideros larvatus
-
 Hipposideros lekaguli
-
 Hipposideros pomona
-
 Hipposideros turpis
-
 Rhinolophus affinis
-
 Rhinolophus coelophyllus
-
 Rhinolophus lepidus
-
 Rhinolophus malayanus
-
 Rhinolophus pearsonii
-
 Rhinolophus pusillus
-
 Rhinolophus rex
-
 Rhinolophus robinsoni
-
 Rhinolophus siamensis
-
 Rhinolophus sinicus
-
 Rhinolophus stheno
-
 Rhinolophus yunanensis
-
 Hypsugo pulveratus
-
 Ia io
-
 Kerivoula hardwickii
-
 Miniopterus magnater
-
 Murina tubinaris
-
 Murina cyclotis
-
 Myotis laniger
-
 Myotis muricola
-
 Myotis siligorensis
-
 Phoniscus jagorii
-
 Scotomanes ornatus
-
 Tylonycteris robustula
-
 Tylonycteris pachypus
-
 Megaderma spasma
-
 Cheiromeles torquatus
 
 ## Getting the source code
@@ -181,7 +146,7 @@ optional arguments:
 
   -h, --help
   
-                        show this help message and exit
+                        show help messages and exit
   
   --AudioFile AUDIOFILE
   
@@ -197,7 +162,7 @@ optional arguments:
 			
   --Output OUTPUT
   
-                        create folder to store result and other temp files
+                        Create folder to store result and other temp files
   
   --ImageWidth IMAGEWIDTH
   
@@ -232,13 +197,13 @@ optional arguments:
                         (optimal) flack range of episodes, must > 0
   
 ## Running on test data
-The test data is an audio file with format of wav (only support wav). 
+The test data is an audio file with format of wav (only support wav in this version). 
 
-All the frozen Model in the file frozen_model.pb in directory ./model.ckpt/BatNet
+All the frozen Model in the file frozen_model.pb are placed in directory ./model.ckpt/BatNet
 
 Species and corresponding to the labels are in ./list/Species_label.xlsx
 
-The final result in the Result_summary.xls in default directory ./TMP, 
+The final result in the Result_summary.xls is stored in default directory ./TMP, 
 
 All log is written in the file log_predict.txt in ./logs.
 
@@ -274,7 +239,7 @@ If not specify a ID, it will generate a random string with 8 characters. To spec
 	
     $ python Convert_Image.py --AudioFile=./audio/test.wav --ID=test
 	
-(2) To convert many audio files, please provide a excel list with three information: audio file, ID and species (Please refer a temple in ./list/Audio_list.xlsx). We will use ID as prefix for all the images filename.
+(2) To convert many audio files, please provide a excel list with three information: audio file, ID and species (Please refer a temple in ./list/Audio_list.xlsx). We will use ID as prefix for all the images.
 
     $ python Convert_Image_batch.py --AudioList=./list/Audio_list.xlsx
 
@@ -282,7 +247,7 @@ If two or more species in audio file, please split it to multiple audio files wi
  
 #### Step 2. Manually assign images to specific folders, which images classify to three categories.
 
-This step requires manually selection. There are four folders generated in step 1 for you to assign the images, include strong, weak, no_signal and others.
+This step requires manually selection. There are four folders generated in step 1 for you to assign the images, including strong, weak, no_signal and others.
 
 Strong folder is provided to store bat signal with relatively intact call structure; 
 
@@ -304,7 +269,7 @@ You can choose single step by configure --Action. The default store directory of
 
     $ python Training.py
 	
-It require tfrecord file to train and valid. Please configure --TrainNum equal to the total number of train images. Currently only provide model BatNet (until 18/12/2018).
+It requires tfrecord file to train and valid. Please configure --TrainNum equal to the total number of train images. Currently only provide model BatNet (until 18/12/2018).
 
 All the model are stored in the folder ./logs
  
@@ -315,9 +280,9 @@ All the model are stored in the folder ./logs
 	
 It will choose the latest generated model in the directory ./logs. The frozen model will save in the ./model.ckpt with pb format.
 	
-Almost all the log file in the logs except step 1. 
+Almost all the log files are placed in the ./logs directory except step 1. 
 
-BatNet and VggNet networks in the MODEL.py in the folder utils.
+BatNet and VggNet networks are in the MODEL.py which placed in the folder utils.
 
 ## License
-Code and audio data are available for research purposes only. For any other use of the software or data, please contact the us.
+Code and audio data are available for research purposes only. For any other use of the software or data, please contact the us: chenxing3753@qq.com
