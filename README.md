@@ -42,7 +42,7 @@ The following packages require to install:
 
 (1) librosa
 
-(2) tensorflow (tensorflow-gpu <= 1.4, 10/09/2019)
+(2) tensorflow (tensorflow-gpu <= 1.4, 28/09/2019)
 
 (3) matplotlib
 
