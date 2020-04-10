@@ -1,6 +1,6 @@
 
 '''
-This script provides ResVggNet and VggNet model.
+This script provides BatNet and VggNet model.
 
 '''
 
