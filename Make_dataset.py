@@ -1,7 +1,7 @@
 """
 This script is to assign pictures after manually select pictures and/or make tfrecord files
-Please provide three fiels:
-(1) list of fold of the assigned images; (Require species name for all folds)
+Please provide two files:
+(1) list of fold of all the assigned images; (Require species name for all folds)
 (2) species and its label. (the label MUST start from 0)
 
 """
@@ -171,7 +171,7 @@ def make_tf(tranDir, validDir, tfDir, files, args, log):
 
     classes = []
     SpeciesLable = ops.Species(args.SpeciesList)
-    for i in range(0, len(SpeciesLable)):  # 选择训练noweak时这里需要更改
+    for i in range(0, len(SpeciesLable)):  # need editing when using noweak dataset
         classes.append(str(i))    
 
     for file in files:
