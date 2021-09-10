@@ -2,7 +2,7 @@
 
 ## Introduction
 
-*Waveman* is pipeline to infer bat species only based on acoustic files.
+*Waveman* is pipeline to infer bat species only based on acoustic data.
 
 It is based on Deep Learning method and is written using Python3(64-bit). It was tested in Windows 7/10, Linux, and Mac OS.
 Not support Python2 and Python3(32-bit) since some problems ocourred when we installed the package librosa.
